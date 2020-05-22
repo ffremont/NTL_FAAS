@@ -12,6 +12,7 @@
     "@types/react-dom": "^16.9.8",
     "@types/react-router-dom": "^5.1.5",
     "firebase-tools": "^8.4.0",
+    "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
@@ -23,7 +24,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy-site": "npm run build && npx firebase deploy --only hosting"
+    "serve": "export GOOGLE_APPLICATION_CREDENTIALS=/home/florent/VisualStudioCode/ntl-faas/functions/ntl-faas-8b55440e8363.json && npm run build && cd functions && npm run build && cd .. && npx firebase emulators:start",
+    "deploy:site": "npm run build && npx firebase deploy --only hosting",
+    "deploy:functions": "cd functions && npm run build && npm run deploy"
   },
   "eslintConfig": {
     "extends": "react-app"

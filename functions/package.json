@@ -2,7 +2,7 @@
   "name": "functions",
   "scripts": {
     "build": "tsc",
-    "serve": "npm run build && firebase emulators:start --only functions",
+    "serve": "export GOOGLE_APPLICATION_CREDENTIALS=ntl-faas-8b55440e8363.json && npm run build && firebase emulators:start --only functions",
     "shell": "npm run build && firebase functions:shell",
     "start": "npm run shell",
     "deploy": "firebase deploy --only functions",
@@ -14,7 +14,8 @@
   "main": "lib/index.js",
   "dependencies": {
     "firebase-admin": "^8.10.0",
-    "firebase-functions": "^3.6.1"
+    "firebase-functions": "^3.6.1",
+    "firebase-tools": "^8.4.0"
   },
   "devDependencies": {
     "typescript": "^3.8.0",

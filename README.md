@@ -3,6 +3,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 # Function as a Service : Niort Tech Live 
 Code de la démo. Slides: https://slides.com/florentfremont/decouvrons-le-faas
 
+## Paramétrage
+cd functions && npx firebase functions:config:set my-apikey="bla...bla...bla"
+
+en local
+npx firebase functions:config:get > .runtimeconfig.json
+
 ## Available Scripts
 
 In the project directory, you can run:

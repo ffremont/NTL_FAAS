@@ -5,6 +5,7 @@
 /.pnp
 /tmp
 .pnp.js
+functions/ntl-faas-8b55440e8363.json
 
 # testing
 /coverage

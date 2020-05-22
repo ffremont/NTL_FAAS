@@ -13,6 +13,11 @@ import Private from './views/private';
 import PrivateRoute from './components/private-route';
 
 function App() {
+  if(process.env.REACT_APP_STAGE !== 'prod'){
+    // en test
+    //window.isAuth= true;
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -25,7 +30,7 @@ function App() {
             <Route exact path="/" component={Hello} />
 
             <Route path="/login" component={Login} />
-            <PrivateRoute exact path="/cart" component={Private} />  
+            <PrivateRoute exact path="/private" component={Private} />  
           </Switch>
         </Router>
     </div>
